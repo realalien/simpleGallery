@@ -15,6 +15,7 @@
 
 @synthesize window;
 @synthesize navController;
+@synthesize viewController;
 
 #pragma mark -
 #pragma mark Application lifecycle
@@ -22,13 +23,20 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {    
     
     // Override point for customization after application launch.
-	[self.window makeKeyAndVisible];
-	
-	// BookingDIY_RETRYAppDelegate *delegate = (BookingDIY_RETRYAppDelegate *)[[UIApplication sharedApplication] delegate];
-		
-	[[ BookShelfManager sharedInstance] loadInventory ];	
-	self.window.rootViewController = self.navController;
+//	[self.window makeKeyAndVisible];
+//	
+//	// BookingDIY_RETRYAppDelegate *delegate = (BookingDIY_RETRYAppDelegate *)[[UIApplication sharedApplication] delegate];
+//		
+//	[[ BookShelfManager sharedInstance] loadInventory ];	
+//	self.window.rootViewController = self.navController;
+
     
+	viewController = [[SplashViewController alloc] init];
+    // Override point for customization after app launch    
+    [window addSubview:[viewController view]];
+	
+    [window makeKeyAndVisible];
+	
     return YES;
 }
 

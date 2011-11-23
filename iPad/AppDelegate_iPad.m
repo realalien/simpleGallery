@@ -10,10 +10,13 @@
 #import "BookShelfViewController.h"
 #import "BookShelfManager.h"
 
+
+
 @implementation AppDelegate_iPad
 
 @synthesize window;
 @synthesize navController;
+@synthesize viewController;
 
 #pragma mark -
 #pragma mark Application lifecycle
@@ -22,12 +25,51 @@
     
     // Override point for customization after application launch.
 
+// FAILED exp.
+//	UIImage* image=[UIImage imageNamed:@"Default_1024X768.png"];
+//	splashView=[[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 1024, 768)]; // initWithImage:image];
+//	splashView.image = image;			
+				
 
-    
-	[self.window makeKeyAndVisible];
+	// SLN#1  just replacing a view, 
+	//NOTE: remember to add navigation view controller(containing BookShelfViewController) to the MainWindows_iPad.xib
+//	splash = [[SplashView alloc] initWithNibName:@"SplashView" bundle:nil ] ;
+//	[window addSubview:splash.view];
+//	
+//	[window bringSubviewToFront:splash.view];
+//	[window makeKeyAndVisible];
 	
-	[[ BookShelfManager sharedInstance] loadInventory ];
-	self.window.rootViewController = self.navController;
+	// temp comment
+	//[self performSelector:@selector(removeSplash) withObject:self afterDelay:2];
+	
+	
+	// NOTE: Just one time loading, the following will be called in SplashViewController init.
+//	[[ BookShelfManager sharedInstance] loadInventory ];
+	
+	
+	// SLN#2  fading effect.
+	viewController = [[SplashViewController alloc] init];
+    // Override point for customization after app launch    
+    [window addSubview:[viewController view]];
+	
+    [window makeKeyAndVisible];
+	
+	
+	
+
+	
+	
+	//[self animateSplashScreen];
+
+	//self.window.rootViewController = self.navController;
+	
+//	[window addSubview:self.navController.view];
+//	SplashView *splash = [[SplashView alloc] initWithNibName:@"SplashView" bundle:nil ] ;
+//	[window addSubview:splash.view];
+	
+	//[self.window makeKeyAndVisible];
+	//SwitchDefault *splash = [[[SwitchDefault alloc] init] autorelease];
+
 	
 	// NOTE: do NOT add following code, as in MainWindow.xib, the navigation view is created with an instance of BookShelfViewController.
 	//	BookShelfViewController *bookShelf = [[BookShelfViewController alloc] initWithNibName:@"BookShelfViewController" bundle:nil ] ;
@@ -74,5 +116,34 @@
     [super dealloc];
 }
 
+#pragma mark -
+#pragma mark Utilities
+
+//- (void) animateSplashScreen
+//{
+//	
+//	//fade time
+//	CFTimeInterval animation_duration = 3;
+//	
+//	//SplashScreen 
+//	UIImageView * splashView = [[[UIImageView alloc] initWithFrame:CGRectMake(0,0, 1024, 768)]autorelease];
+//	splashView.image = [UIImage imageNamed:@"Default_1024x768.png"];
+//	[window addSubview:splashView];
+//	[window bringSubviewToFront:splashView];
+//	
+//	
+//	
+//	//Animation (fade away with zoom effect)
+//	[UIView beginAnimations:nil context:nil];
+//	[UIView setAnimationDuration:animation_duration];
+//	[UIView setAnimationTransition:UIViewAnimationTransitionFlipFromLeft forView:self.window cache:YES];
+//	[UIView setAnimationDelegate:splashView]; 
+//	[UIView setAnimationDidStopSelector:@selector(removeFromSuperview)];
+//	splashView.alpha = 0.0;
+//	splashView.frame = CGRectMake(-60, -60, 440, 600);
+//	
+//	[UIView commitAnimations];
+//	
+//}
 
 @end
