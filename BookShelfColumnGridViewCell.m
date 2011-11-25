@@ -41,8 +41,8 @@
 //  BookShelfColumnGridViewCell.m
 //  Milestones
 //
-//  Created by GuZhenZhen on 6/28/11.
-//  Copyright 2011 Spicyhorse Studio. All rights reserved.
+//  Created by anonymous on 6/28/11.
+//  Copyright 2011 companyName Studio. All rights reserved.
 //
 
 // NOTES: for the cell imageview shadow, please refer to th example code of SpringBoard (of AQGridView source)

@@ -1,9 +1,9 @@
     //
 //  CustomizedUIScrollViewForImageView.m
-//  SpicyhorseGallary
+//  companyNameGallary
 //
-//  Created by realalien on 11/22/11.
-//  Copyright 2011 Spicyhorse Studio. All rights reserved.
+//  Created by anonymous on 11/22/11.
+//  Copyright 2011 companyName Studio. All rights reserved.
 //
 
 #import "CustomizedUIScrollViewForImageView.h"

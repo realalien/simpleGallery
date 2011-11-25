@@ -2,8 +2,8 @@
 //  StaticBookReader.h
 //  Milestones
 //
-//  Created by GuZhenZhen on 6/24/11.
-//  Copyright 2011 Spicyhorse Studio. All rights reserved.
+//  Created by anonymous on 6/24/11.
+//  Copyright 2011 companyName. All rights reserved.
 //
 //
 // Devnote: similar to the BookShelfManager, control each lifecyle of page instance.

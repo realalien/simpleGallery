@@ -2,8 +2,8 @@
 //  ImageDetailView.h
 //  MarksArtBookI
 //
-//  Created by realalien on 11/18/11.
-//  Copyright 2011 Spicyhorse Studio. All rights reserved.
+//  Created by anonymous on 11/18/11.
+//  Copyright 2011 companyName Studio. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
@@ -59,7 +59,7 @@
 -(void) setImageTo:(int)imageID ;
 -(void) showNextArt ;
 
--(void)pickImageNamed:(UIImage*)image;
+//-(void)pickImageNamed:(UIImage*)image;
 
 - (CGRect)zoomRectForScale:(float)scale withCenter:(CGPoint)center;
 

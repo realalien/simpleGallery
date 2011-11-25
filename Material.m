@@ -2,8 +2,8 @@
 //  Material.m
 //  Milestones
 //
-//  Created by GuZhenZhen on 7/6/11.
-//  Copyright 2011 Spicyhorse Studio. All rights reserved.
+//  Created by anonymous on 7/6/11.
+//  Copyright 2011 companyName Studio. All rights reserved.
 //
 
 #import "Material.h"
@@ -136,6 +136,7 @@
 		}
 	//}
 	//return NULL; 
+	return self;
 }
 
 

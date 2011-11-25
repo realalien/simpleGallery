@@ -2,8 +2,8 @@
 //  BookShelfColumnGridViewController.m
 //  Milestones
 //
-//  Created by GuZhenZhen on 6/28/11.
-//  Copyright 2011 Spicyhorse Studio. All rights reserved.
+//  Created by anonymous on 6/28/11.
+//  Copyright 2011 companyName Studio. All rights reserved.
 //
 
 #import "BookShelfColumnGridViewController.h"
@@ -186,6 +186,7 @@
 		return CGSizeMake(140.0, 120.0);
 	}
 	
+	return CGSizeMake(0, 0) ;  // Q: how to avoid 'Control reaches end of non-void function' if return clause embeded in if-else
 	//TODO: FIXME, code template
 	// return ( CGSizeMake( (1024-20) / 2, (768 -20)/ 2) );    // 2x2 full screen on iPad.
 		
@@ -385,72 +386,72 @@
 /////////////////////////////////////////////////////////////////////////////////
 
 
-- (void)productsRequest:(SKProductsRequest *)request didReceiveResponse:(SKProductsResponse *)response {
-	if (response.invalidProductIdentifiers != NULL && [response.invalidProductIdentifiers count ] > 0) {
-		// send maintaining report to the server side 
-		NSLog(@"[ERROR] User got invalid product identifer(s) when requesting Apple store, please check following identifier, %@",response.invalidProductIdentifiers );
-		[self debugAlertWithTitle:@"ERROR" message:@"User got invalid product identifer(s) when requesting Apple store, please check following identifier"];
-	}
-	
-	SKProduct *product = [[response products] lastObject];
-    if (!product)
-    {   
-		NSLog(@"[Error] The product request doesn't get a valid product in the response");
-		[self debugAlertWithTitle:@"ERROR" message:@"The product request doesn't get a valid product in the response" ];
-    }else {
-		// Update product information at local(if not free)
-		
-		// Note, the senderObject seems useless as the object is general used/known to other source code.
-		// Q: the problem is how to update gridcell with new information.
-		
-		// TODO: we will use ModalView or Popup to present product detail, now just an alert button/logging.
-		NSLog(@"localizedDescription [%@]\tlocalizedTitle [%@]\tprice [%@]\tpriceLocale [%@]\tproductIdentifier [%@]", product.localizedDescription , product.localizedTitle, product.price, product.priceLocale, product.productIdentifier);
-		
-		// INFO sample code can be got from 
-		// Retrieve the localized price
-		NSNumberFormatter *numberFormatter = [[NSNumberFormatter alloc] init];
-		[numberFormatter setFormatterBehavior:NSNumberFormatterBehavior10_4];
-		[numberFormatter setNumberStyle:NSNumberFormatterCurrencyStyle];
-		[numberFormatter setLocale:product.priceLocale];
-//		NSString *formattedString = [numberFormatter stringFromNumber:product.price];
-		[numberFormatter release];
+//- (void)productsRequest:(SKProductsRequest *)request didReceiveResponse:(SKProductsResponse *)response {
+//	if (response.invalidProductIdentifiers != NULL && [response.invalidProductIdentifiers count ] > 0) {
+//		// send maintaining report to the server side 
+//		NSLog(@"[ERROR] User got invalid product identifer(s) when requesting Apple store, please check following identifier, %@",response.invalidProductIdentifiers );
+//		[self debugAlertWithTitle:@"ERROR" message:@"User got invalid product identifer(s) when requesting Apple store, please check following identifier"];
+//	}
+//	
+//	SKProduct *product = [[response products] lastObject];
+//    if (!product)
+//    {   
+//		NSLog(@"[Error] The product request doesn't get a valid product in the response");
+//		[self debugAlertWithTitle:@"ERROR" message:@"The product request doesn't get a valid product in the response" ];
+//    }else {
+//		// Update product information at local(if not free)
+//		
+//		// Note, the senderObject seems useless as the object is general used/known to other source code.
+//		// Q: the problem is how to update gridcell with new information.
+//		
+//		// TODO: we will use ModalView or Popup to present product detail, now just an alert button/logging.
+//		NSLog(@"localizedDescription [%@]\tlocalizedTitle [%@]\tprice [%@]\tpriceLocale [%@]\tproductIdentifier [%@]", product.localizedDescription , product.localizedTitle, product.price, product.priceLocale, product.productIdentifier);
+//		
+//		// INFO sample code can be got from 
+//		// Retrieve the localized price
+//		NSNumberFormatter *numberFormatter = [[NSNumberFormatter alloc] init];
+//		[numberFormatter setFormatterBehavior:NSNumberFormatterBehavior10_4];
+//		[numberFormatter setNumberStyle:NSNumberFormatterCurrencyStyle];
+//		[numberFormatter setLocale:product.priceLocale];
+////		NSString *formattedString = [numberFormatter stringFromNumber:product.price];
+//		[numberFormatter release];
+//
+//		// Create a description that gives a heads up about
+//		// a non-consumable purchase
+//
+////		NSString *buyString = formattedString;
+////		NSString *describeString = [NSString stringWithFormat:@"%@\n\nIf you have already purchased this item, you will not be charged again.", product.localizedDescription];
+////		NSArray *buttons = [NSArray arrayWithObject: buyString];
+//		
+//		// Offer the user a choice to buy or not buy
+////		if ([ModalAlert ask:describeString withCancel:@"No Thanks" withButtons:buttons])
+////		{
+////			[self startCheckPurchasing];
+////			SKPayment *payment = [SKPayment paymentWithProductIdentifier:product.productIdentifier];  //[response.products objectAtIndex:0].productIdentifier];
+////			[[SKPaymentQueue defaultQueue] addPayment:payment];
+////		}
+////		else
+////		{
+////			// restore the GUI to provide a buy/purchase button
+////			// or otherwise to a ready-to-buy state  
+////			[self loadingViewData];
+////		}
+//		
+//		//   ----------- end of sample code 
+//		
+//	}
+//}
 
-		// Create a description that gives a heads up about
-		// a non-consumable purchase
-
-//		NSString *buyString = formattedString;
-//		NSString *describeString = [NSString stringWithFormat:@"%@\n\nIf you have already purchased this item, you will not be charged again.", product.localizedDescription];
-//		NSArray *buttons = [NSArray arrayWithObject: buyString];
-		
-		// Offer the user a choice to buy or not buy
-//		if ([ModalAlert ask:describeString withCancel:@"No Thanks" withButtons:buttons])
-//		{
-//			[self startCheckPurchasing];
-//			SKPayment *payment = [SKPayment paymentWithProductIdentifier:product.productIdentifier];  //[response.products objectAtIndex:0].productIdentifier];
-//			[[SKPaymentQueue defaultQueue] addPayment:payment];
-//		}
-//		else
-//		{
-//			// restore the GUI to provide a buy/purchase button
-//			// or otherwise to a ready-to-buy state  
-//			[self loadingViewData];
-//		}
-		
-		//   ----------- end of sample code 
-		
-	}
-}
-
-- (void)request:(SKRequest *)request didFailWithError:(NSError *)error {
-	[self debugAlertWithTitle:@"ERROR" message:[@"Request failed, Error: " stringByAppendingString:[error localizedFailureReason] ]];
-}
-
-// Q: what if error occurs, I once saw the some doc about not carrying out this method.
-- (void)requestDidFinish:(SKRequest *)request {
-	// Release the request
-    [request release];
-    NSLog(@"Request finished.");	
-}
+//- (void)request:(SKRequest *)request didFailWithError:(NSError *)error {
+//	[self debugAlertWithTitle:@"ERROR" message:[@"Request failed, Error: " stringByAppendingString:[error localizedFailureReason] ]];
+//}
+//
+//// Q: what if error occurs, I once saw the some doc about not carrying out this method.
+//- (void)requestDidFinish:(SKRequest *)request {
+//	// Release the request
+//    [request release];
+//    NSLog(@"Request finished.");	
+//}
 
 
 //-(BOOL) verifyReceiptAtDeviceSide:(SKPaymentTransaction *)transaction{

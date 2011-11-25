@@ -2,8 +2,8 @@
 //  ImageDetailView.m
 //  MarksArtBookI
 //
-//  Created by realalien on 11/18/11.
-//  Copyright 2011 Spicyhorse Studio. All rights reserved.
+//  Created by anonymous on 11/18/11.
+//  Copyright 2011 companyName Studio. All rights reserved.
 //
 
 #import "ImageDetailView.h"
@@ -429,25 +429,25 @@
 //}
 //
 //
-#pragma mark -
-#pragma mark View handling methods
--(void)pickImageNamed:(UIImage*)image{
-	[[imageScrollView viewWithTag:ZOOM_VIEW_TAG] removeFromSuperview];
-	
-	//    UIImage *image = [UIImage imageNamed:[NSString stringWithFormat:@"%@.png", name]];
-    TapDetectingImageView *zoomView = [[TapDetectingImageView alloc] initWithImage:image];
-    [zoomView setDelegate:self];
-    [zoomView setTag:ZOOM_VIEW_TAG];
-    [imageScrollView addSubview:zoomView];
-    [imageScrollView setContentSize:[zoomView frame].size];
-    [zoomView release];
-	
-    // choose minimum scale so image width fits screen
-    float minScale  = [imageScrollView frame].size.width  / [zoomView frame].size.width;
-    [imageScrollView setMinimumZoomScale:minScale];
-    [imageScrollView setZoomScale:minScale];
-    [imageScrollView setContentOffset:CGPointZero];
-}
+//#pragma mark -
+//#pragma mark View handling methods
+//-(void)pickImageNamed:(UIImage*)image{
+//	[[imageScrollView viewWithTag:ZOOM_VIEW_TAG] removeFromSuperview];
+//	
+//	//    UIImage *image = [UIImage imageNamed:[NSString stringWithFormat:@"%@.png", name]];
+//    TapDetectingImageView *zoomView = [[TapDetectingImageView alloc] initWithImage:image];
+//    [zoomView setDelegate:self];
+//    [zoomView setTag:ZOOM_VIEW_TAG];
+//    [imageScrollView addSubview:zoomView];
+//    [imageScrollView setContentSize:[zoomView frame].size];
+//    [zoomView release];
+//	
+//    // choose minimum scale so image width fits screen
+//    float minScale  = [imageScrollView frame].size.width  / [zoomView frame].size.width;
+//    [imageScrollView setMinimumZoomScale:minScale];
+//    [imageScrollView setZoomScale:minScale];
+//    [imageScrollView setContentOffset:CGPointZero];
+//}
 
 #pragma mark Utility methods
 

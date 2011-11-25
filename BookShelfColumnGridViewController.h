@@ -2,8 +2,8 @@
 //  BookShelfColumnGridViewController.h
 //  Milestones
 //
-//  Created by GuZhenZhen on 6/28/11.
-//  Copyright 2011 Spicyhorse Studio. All rights reserved.
+//  Created by anonymous on 6/28/11.
+//  Copyright 2011 companyName Studio. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
@@ -55,7 +55,7 @@
 //-(NSString *)gridIndexToBookInfo:(int)gridIndex forAttribute:(NSString *)attrName ;
 //-(NSDictionary *)gridIndexToBookInfo:(int)gridIndex ;
 
--(void)useMaterial:( BookShelfColumnGridViewCell *)cell ;
+//-(void)useMaterial:( BookShelfColumnGridViewCell *)cell ;
 //-(void)downloadMaterial:( BookShelfColumnGridViewCell *)cell ;
 
 @end

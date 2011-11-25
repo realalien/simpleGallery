@@ -2,8 +2,8 @@
 //  BookShelfManager.h
 //  Milestones
 //
-//  Created by GuZhenZhen on 6/23/11.
-//  Copyright 2011 Spicyhorse Studio. All rights reserved.
+//  Created by anonymous on 6/23/11.
+//  Copyright 2011 companyName Studio. All rights reserved.
 //
 
 // Manage the books in the bookshelf
@@ -75,19 +75,19 @@ typedef UIImage CCSprite;
 -(void) loadExistingMaterials ;
 -(void) prepareMaterialCoverFolder ;
 
--(NSString *) getCoverDownloadDestinationFromMaterialInfo:(NSDictionary *)jsonInfo ;
--(NSString *) getCoverDownloadURLFromMaterialInfo:(NSDictionary *)jsonInfo ;
+//-(NSString *) getCoverDownloadDestinationFromMaterialInfo:(NSDictionary *)jsonInfo ;
+//-(NSString *) getCoverDownloadURLFromMaterialInfo:(NSDictionary *)jsonInfo ;
+//
+//-(NSString *) getContentDownloadDestinationFromMaterialInfo:(NSDictionary *)jsonInfo ;
+//-(NSString *) getContentDownloadURLFromMaterialInfo:(NSDictionary *)jsonInfo ;
 
--(NSString *) getContentDownloadDestinationFromMaterialInfo:(NSDictionary *)jsonInfo ;
--(NSString *) getContentDownloadURLFromMaterialInfo:(NSDictionary *)jsonInfo ;
 
-
--(void) updateMaterialFromJSONString:(NSString *)jsonString ;
+//-(void) updateMaterialFromJSONString:(NSString *)jsonString ;
 -(void) persistAllMaterialsToPlist ;
 -(void) loadMaterialCoversForBookShelf ;
 
--(void)downloadBookCoverFor:(NSMutableDictionary *)oneMaterial;
--(void)downloadBookCoverForMaterial:(Material *)mat ;
+//-(void)downloadBookCoverFor:(NSMutableDictionary *)oneMaterial;
+//-(void)downloadBookCoverForMaterial:(Material *)mat ;
 
 -(NSArray *)allValuesFromArrayOfDictionary:(NSArray*)arrayOfDictionary forKey:(NSString*)key ;
 
@@ -97,6 +97,6 @@ typedef UIImage CCSprite;
  *  
  */
 -(void) loadInventory;
-
+-(void)saveAllMaterialsToConfig:(NSArray *) materialObjects ;
 
 @end
