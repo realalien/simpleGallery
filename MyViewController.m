@@ -46,18 +46,28 @@
  */
 
 #import "MyViewController.h"
+#import "ImageDetailView.h"
 
 @implementation MyViewController
 
-@synthesize pageNumberLabel, numberTitle, numberImage;
+@synthesize pageNumberLabel, numberTitle, numberImage, detailView;
 
 // load the view nib and initialize the pageNumber ivar
 - (id)initWithPageNumber:(int)page
 {
-    if  ((self = [super initWithNibName:@"MyView" bundle:nil]))
-    {
-        pageNumber = page;
-    }
+	if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad ) {
+		if  ((self = [super initWithNibName:@"MyView_iPad" bundle:nil]))
+		{		
+			pageNumber = page;		
+		}	
+	}else if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone ) {
+		if  ((self = [super initWithNibName:@"MyView_iPhone" bundle:nil]))
+		{		
+			pageNumber = page;		
+		}		
+	}
+	
+
     return self;
 }
 
@@ -73,7 +83,11 @@
 // set the label and background color when the view has finished loading
 - (void)viewDidLoad
 {
-    pageNumberLabel.text = [NSString stringWithFormat:@"Page %d", pageNumber + 1];
+    // pageNumberLabel.text = [NSString stringWithFormat:@"Page %d", pageNumber + 1];
+	
+	ImageDetailView *aDetailView = [[ImageDetailView alloc] initWithPageNumber:pageNumber];  //  [[ImageDetailView alloc] initWithNibName:@"ImageDetailView_iPhone" bundle:nil];
+	self.view = aDetailView.view;
+	
 }
 
 @end

@@ -57,12 +57,16 @@
     UIImageView *numberImage;
 	
 	//CCScene *currentBookShelfColumn ;
+	
+	UIView *detailView;
 }
 
 @property (nonatomic, retain) IBOutlet UILabel *pageNumberLabel;
 
 @property (nonatomic, retain) IBOutlet UILabel *numberTitle;
 @property (nonatomic, retain) IBOutlet UIImageView *numberImage;
+@property (nonatomic, retain) IBOutlet UIView *detailView;
+
 
 - (id)initWithPageNumber:(int)page;
 

@@ -19,14 +19,39 @@
 
  // The designated initializer.  Override if you create the controller programmatically and want to perform customization that is not appropriate for viewDidLoad.
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization.
 
-    }
+- (id)initWithPageNumber:(int)page
+{
+    
+	
+	if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad ) {
+		if  ((self = [super initWithNibName:@"ImageDetailView_iPad" bundle:nil]))
+		{		
+			artPageNumber = page;		
+			
+		}
+	}else if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone ) {
+		if  ((self = [super initWithNibName:@"ImageDetailView_iPhone" bundle:nil]))
+		{		
+			artPageNumber = page;		
+			
+		}		
+	}
+	
+	
+
     return self;
-} 
+}
+
+
+//- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
+//    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+//    if (self) {
+//        // Custom initialization.
+//
+//    }
+//    return self;
+//} 
 
 
 -(BOOL) canBecomeFirstResponder {
@@ -39,7 +64,7 @@
 
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad {
-	int theArtId = [BookShelfManager sharedInstance].currentProcessingImageID;
+	int theArtId = artPageNumber ; //[BookShelfManager sharedInstance].currentProcessingImageID ;   //  = 2 //(for debugging)
 	NSLog(@"(Material *)[[[BookShelfManager sharedInstance] allMaterials] objectAtIndex:theArtId] is %@", [[[BookShelfManager sharedInstance] allMaterials] objectAtIndex:theArtId]);
 	NSString *fileName = ((Material *)[[[BookShelfManager sharedInstance] allMaterials] objectAtIndex:theArtId]).contentFullPathAtDevice;
 
@@ -59,7 +84,9 @@
 	// [self pickImageNamed:image];
 	
 	
-	self.imageScrollView.contentSize = image.size;
+	self.imageScrollView.contentSize = imageScrollView.bounds.size; // image.size;
+	NSLog(@" imageScrollView  content Size is   (%f, %f)", imageScrollView.contentSize.width, imageScrollView.contentSize.height);
+	NSLog(@" imageScrollView   bounds   is  (%f, %f)", imageScrollView.bounds.size.width, imageScrollView.bounds.size.height);
 	
     self.imageScrollView.minimumZoomScale = 0.2;
     self.imageScrollView.maximumZoomScale = 4.0;
@@ -142,7 +169,6 @@
 -(IBAction) shareSocially:(id)sender{	
 	//code example http://getsharekit.com/docs/#image
 	NSMutableArray *shelf = [[BookShelfManager sharedInstance] allMaterials];
-	//NSString *filepath = ((Material *)[shelf objectAtIndex: [BookShelfManager sharedInstance].currentProcessingImageID]).coverFullPathAtDevice;
 	NSString *name = ((Material *)[shelf objectAtIndex: [BookShelfManager sharedInstance].currentProcessingImageID]).name;
 	UIImage *image = [UIImage imageNamed:name];
 	SHKItem *item = [SHKItem image:image title:@"Look at this picture!"];

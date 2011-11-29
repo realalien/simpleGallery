@@ -33,6 +33,11 @@
 		E20EDBC1147C986900A5E37E /* arrow_full_right_16.png in Resources */ = {isa = PBXBuildFile; fileRef = E20EDBBF147C986900A5E37E /* arrow_full_right_16.png */; };
 		E20EDBC2147C986900A5E37E /* arrow_full_left_16.png in Resources */ = {isa = PBXBuildFile; fileRef = E20EDBC0147C986900A5E37E /* arrow_full_left_16.png */; };
 		E20EDD9A147CCD3F00A5E37E /* SplashViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E20EDD99147CCD3F00A5E37E /* SplashViewController.m */; };
+		E2C3160214839256002919D9 /* ImagesScrollView_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = E2C3160114839256002919D9 /* ImagesScrollView_iPhone.xib */; };
+		E2C31606148393B3002919D9 /* ImagesScrollViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E2C31605148393B3002919D9 /* ImagesScrollViewController.m */; };
+		E2C3163914839CCB002919D9 /* MyView_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = E2C3163814839CCB002919D9 /* MyView_iPhone.xib */; };
+		E2C318A21484F2A2002919D9 /* ImagesScrollView_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = E2C318A11484F2A2002919D9 /* ImagesScrollView_iPad.xib */; };
+		E2C318AE1484F3F5002919D9 /* MyView_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = E2C318AD1484F3F5002919D9 /* MyView_iPad.xib */; };
 		E2EE40641476547A00182D46 /* BookShelfManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E2EE40391476547A00182D46 /* BookShelfManager.m */; };
 		E2EE40671476547A00182D46 /* StaticBook.m in Sources */ = {isa = PBXBuildFile; fileRef = E2EE40401476547A00182D46 /* StaticBook.m */; };
 		E2EE40681476547A00182D46 /* Material.m in Sources */ = {isa = PBXBuildFile; fileRef = E2EE40421476547A00182D46 /* Material.m */; };
@@ -104,7 +109,7 @@
 		E2EE41D414765F6B00182D46 /* PG1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E2EE41AC14765F6B00182D46 /* PG1.jpg */; };
 		E2EE41D514765F6B00182D46 /* PG7.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E2EE41AD14765F6B00182D46 /* PG7.jpg */; };
 		E2EE42651476773300182D46 /* ImageDetailView.m in Sources */ = {isa = PBXBuildFile; fileRef = E2EE42631476773300182D46 /* ImageDetailView.m */; };
-		E2EE42661476773300182D46 /* ImageDetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E2EE42641476773300182D46 /* ImageDetailView.xib */; };
+		E2EE42661476773300182D46 /* ImageDetailView_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = E2EE42641476773300182D46 /* ImageDetailView_iPad.xib */; };
 		E2EE444E1478EED100182D46 /* SHKCustomShareMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = E2EE43B61478EED000182D46 /* SHKCustomShareMenu.m */; };
 		E2EE444F1478EED100182D46 /* SHKCustomShareMenuCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E2EE43B81478EED000182D46 /* SHKCustomShareMenuCell.m */; };
 		E2EE44501478EED100182D46 /* SHKCustomFormController.m in Sources */ = {isa = PBXBuildFile; fileRef = E2EE43BB1478EED000182D46 /* SHKCustomFormController.m */; };
@@ -210,6 +215,12 @@
 		E20EDD99147CCD3F00A5E37E /* SplashViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SplashViewController.m; path = iPad/SplashViewController.m; sourceTree = "<group>"; };
 		E2240394147F97A10051DA17 /* PG99.jpg.eg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = PG99.jpg.eg; sourceTree = "<group>"; };
 		E2240395147F97B50051DA17 /* thumbPG99.jpg.eg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = thumbPG99.jpg.eg; sourceTree = "<group>"; };
+		E2C3160114839256002919D9 /* ImagesScrollView_iPhone.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ImagesScrollView_iPhone.xib; sourceTree = "<group>"; };
+		E2C31604148393B3002919D9 /* ImagesScrollViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImagesScrollViewController.h; sourceTree = "<group>"; };
+		E2C31605148393B3002919D9 /* ImagesScrollViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImagesScrollViewController.m; sourceTree = "<group>"; };
+		E2C3163814839CCB002919D9 /* MyView_iPhone.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyView_iPhone.xib; sourceTree = "<group>"; };
+		E2C318A11484F2A2002919D9 /* ImagesScrollView_iPad.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ImagesScrollView_iPad.xib; sourceTree = "<group>"; };
+		E2C318AD1484F3F5002919D9 /* MyView_iPad.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyView_iPad.xib; sourceTree = "<group>"; };
 		E2EE40381476547A00182D46 /* BookShelfManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BookShelfManager.h; sourceTree = "<group>"; };
 		E2EE40391476547A00182D46 /* BookShelfManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BookShelfManager.m; sourceTree = "<group>"; };
 		E2EE403F1476547A00182D46 /* StaticBook.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StaticBook.h; sourceTree = "<group>"; };
@@ -311,7 +322,7 @@
 		E2EE41AD14765F6B00182D46 /* PG7.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = PG7.jpg; sourceTree = "<group>"; };
 		E2EE42621476773300182D46 /* ImageDetailView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ImageDetailView.h; path = iPad/ImageDetailView.h; sourceTree = "<group>"; };
 		E2EE42631476773300182D46 /* ImageDetailView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ImageDetailView.m; path = iPad/ImageDetailView.m; sourceTree = "<group>"; };
-		E2EE42641476773300182D46 /* ImageDetailView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ImageDetailView.xib; sourceTree = "<group>"; };
+		E2EE42641476773300182D46 /* ImageDetailView_iPad.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ImageDetailView_iPad.xib; sourceTree = "<group>"; };
 		E2EE43B21478EED000182D46 /* SHKConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHKConfig.h; sourceTree = "<group>"; };
 		E2EE43B51478EED000182D46 /* SHKCustomShareMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHKCustomShareMenu.h; sourceTree = "<group>"; };
 		E2EE43B61478EED000182D46 /* SHKCustomShareMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHKCustomShareMenu.m; sourceTree = "<group>"; };
@@ -478,6 +489,8 @@
 				2860E326111B887F00E27156 /* AppDelegate_iPhone.m */,
 				2860E327111B887F00E27156 /* MainWindow_iPhone.xib */,
 				E2038BDC147B931200AC67CB /* ImageDetailView_iPhone.xib */,
+				E2C3160114839256002919D9 /* ImagesScrollView_iPhone.xib */,
+				E2C3163814839CCB002919D9 /* MyView_iPhone.xib */,
 			);
 			path = iPhone;
 			sourceTree = "<group>";
@@ -488,7 +501,9 @@
 				2860E32B111B888700E27156 /* AppDelegate_iPad.h */,
 				2860E32C111B888700E27156 /* AppDelegate_iPad.m */,
 				2860E32D111B888700E27156 /* MainWindow_iPad.xib */,
-				E2EE42641476773300182D46 /* ImageDetailView.xib */,
+				E2EE42641476773300182D46 /* ImageDetailView_iPad.xib */,
+				E2C318A11484F2A2002919D9 /* ImagesScrollView_iPad.xib */,
+				E2C318AD1484F3F5002919D9 /* MyView_iPad.xib */,
 			);
 			path = iPad;
 			sourceTree = "<group>";
@@ -559,7 +574,6 @@
 			isa = PBXGroup;
 			children = (
 				E2EE408A1476555900182D46 /* Constants.h */,
-				E2EE40611476547A00182D46 /* Utilities */,
 				E2EE40511476547A00182D46 /* Views */,
 				E2EE40431476547A00182D46 /* Controllers */,
 				E2EE403E1476547A00182D46 /* Models */,
@@ -593,6 +607,8 @@
 				E2EE404B1476547A00182D46 /* BookShelfColumnGridViewController.m */,
 				E2EE404C1476547A00182D46 /* BookShelfColumnGridViewController.xib */,
 				E2EE404D1476547A00182D46 /* BookShelfColumnGridViewController_iPhone.xib */,
+				E2C31604148393B3002919D9 /* ImagesScrollViewController.h */,
+				E2C31605148393B3002919D9 /* ImagesScrollViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -612,13 +628,6 @@
 				E2038A66147B535300AC67CB /* CustomizedUIScrollViewForImageView.m */,
 			);
 			name = Views;
-			sourceTree = "<group>";
-		};
-		E2EE40611476547A00182D46 /* Utilities */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Utilities;
 			sourceTree = "<group>";
 		};
 		E2EE40D614765A1200182D46 /* Libraries */ = {
@@ -1249,7 +1258,7 @@
 				E2EE41D314765F6B00182D46 /* PG2.jpg in Resources */,
 				E2EE41D414765F6B00182D46 /* PG1.jpg in Resources */,
 				E2EE41D514765F6B00182D46 /* PG7.jpg in Resources */,
-				E2EE42661476773300182D46 /* ImageDetailView.xib in Resources */,
+				E2EE42661476773300182D46 /* ImageDetailView_iPad.xib in Resources */,
 				E2EE44521478EED100182D46 /* SHKSharers.plist in Resources */,
 				E2EE446F1478EED100182D46 /* FBConnect.bundle in Resources */,
 				E2038BDD147B931200AC67CB /* ImageDetailView_iPhone.xib in Resources */,
@@ -1267,6 +1276,10 @@
 				E20EDB99147C929900A5E37E /* Default_1024x768.png in Resources */,
 				E20EDBC1147C986900A5E37E /* arrow_full_right_16.png in Resources */,
 				E20EDBC2147C986900A5E37E /* arrow_full_left_16.png in Resources */,
+				E2C3160214839256002919D9 /* ImagesScrollView_iPhone.xib in Resources */,
+				E2C3163914839CCB002919D9 /* MyView_iPhone.xib in Resources */,
+				E2C318A21484F2A2002919D9 /* ImagesScrollView_iPad.xib in Resources */,
+				E2C318AE1484F3F5002919D9 /* MyView_iPad.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1369,6 +1382,7 @@
 				E2038A67147B535300AC67CB /* CustomizedUIScrollViewForImageView.m in Sources */,
 				E2038AC8147B68F900AC67CB /* TapDetectingImageView.m in Sources */,
 				E20EDD9A147CCD3F00A5E37E /* SplashViewController.m in Sources */,
+				E2C31606148393B3002919D9 /* ImagesScrollViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

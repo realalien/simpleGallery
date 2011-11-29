@@ -39,19 +39,19 @@
 
 
 // Delicious - https://developer.apps.yahoo.com/projects
-#define SHKDeliciousConsumerKey		@""
-#define SHKDeliciousSecretKey		@""
+#define SHKDeliciousConsumerKey		@"dj0yJmk9SUl4UENDZ00wRHdrJmQ9WVdrOVFuTjVOMFZ2TjJjbWNHbzlNVFV6TlRBeE9EWTJNZy0tJnM9Y29uc3VtZXJzZWNyZXQmeD02Yw--"
+#define SHKDeliciousSecretKey		@"5a9893acd652c7928aae8d231e4cff5a56e8d4fc"
 
 // Facebook - http://www.facebook.com/developers
 // If SHKFacebookUseSessionProxy is enabled then SHKFacebookSecret is ignored and should be left blank
 
 #define SHKFacebookUseSessionProxy  NO 
-#define SHKFacebookKey				@""
-#define SHKFacebookSecret			@""
+#define SHKFacebookKey				@"247705675288712"
+#define SHKFacebookSecret			@"06af664df8057b6638b11ddaca9cc0e2"
 #define SHKFacebookSessionProxyURL  @""
 
 // Read It Later - http://readitlaterlist.com/api/?shk
-#define SHKReadItLaterKey			@""
+#define SHKReadItLaterKey			@"c95TVDi9g3f83j4172d788eu31paG4a3"
 
 // Twitter - http://dev.twitter.com/apps/new
 /*
@@ -76,8 +76,8 @@
 #define SHKTwitterUsername			@"" // Enter your app's twitter account if you'd like to ask the user to follow it when logging in. (Only for xAuth)
 
 // Bit.ly (for shortening URLs on Twitter) - http://bit.ly/account/register - after signup: http://bit.ly/a/your_api_key
-#define SHKBitLyLogin				@""
-#define SHKBitLyKey					@""
+#define SHKBitLyLogin				@"realalien"
+#define SHKBitLyKey				@"R_692cf46709024861ae86cdcb0f69b23c"
 
 // ShareMenu Ordering
 #define SHKShareMenuAlphabeticalOrder 1 // Setting this to 1 will show list in Alphabetical Order, setting to 0 will follow the order in SHKShares.plist

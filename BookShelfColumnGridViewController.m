@@ -12,7 +12,11 @@
 //#import	"ImageScene.h"
 #import "UIKit/UIDevice.h"
 #import "AppDelegate_iPad.h"
+#import "AppDelegate_iPhone.h"
 #import "ImageDetailView.h"
+
+
+#import "ImagesScrollViewController.h"
 
 @implementation BookShelfColumnGridViewController
 
@@ -194,8 +198,8 @@
 }
 
 -(void) gridView: (AQGridView *) gridView didSelectItemAtIndex: (NSUInteger) index{
-	NSLog(@"the selected index is %d", index);
-	NSLog(@"probably you clicked the  book %d in sequence. ",  pageNumber * [BookShelfManager sharedInstance ].bookNumberOnEachColumn + index + HUMAN_MACHINE_NUM_INDEX_DIFF); 
+
+	
 	
 	// NOTE: to avoid probable later requirement of deleting one book(either at server side or client side), 
 	//  the 'id' info shall not be used in counting, indexing because programs will be easily crippled. Use identifier instead.
@@ -210,11 +214,10 @@
 	BookShelfColumnGridViewCell *cell = [self.gridView.visibleCells objectAtIndex:index ];	
 	[self setCurrentProcessingCell: cell];
 	
-	[BookShelfManager sharedInstance].currentProcessingImageID = pageNumber * [BookShelfManager sharedInstance ].bookNumberOnEachColumn + index ;
+	[BookShelfManager sharedInstance].targetImageID = pageNumber * [BookShelfManager sharedInstance ].bookNumberOnEachColumn + index ;
+	NSLog(@"[DEBUG] In BookShelfGrid, the selected index is %d", index);
+	NSLog(@"[DEBUG] [BookShelfManager sharedInstance].targetImageID  [ %d ]",  [BookShelfManager sharedInstance].targetImageID );  // + HUMAN_MACHINE_NUM_INDEX_DIFF
 	
-	// [self loadOrBuy:cell ] ;
-	
-
 	
 	//	CCScene* scene = [PictureRotation scene];
 	//	PictureRotation *layer = (PictureRotation *) [scene.children objectAtIndex:0];
@@ -247,21 +250,33 @@
 	
 	//UIImage *image = [[[BookShelfManager sharedInstance] allMaterials] objectAtIndex:(pageNumber * BOOKS_NUMBER_ON_EACH_SHELF + index)];
 	
+
 	
-	ImageDetailView *theDetailView ;
+	//  Just a single image view.
+//	ImageDetailView *theDetailView ;
+//	if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad ) {
+//		theDetailView = [[ImageDetailView alloc] initWithNibName:@"ImageDetailView" bundle:nil];
+//	}else if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone ) {
+//		theDetailView = [[ImageDetailView alloc] initWithNibName:@"ImageDetailView_iPhone" bundle:nil];
+//	}
+//	
+//	AppDelegate_iPad *delegate = (AppDelegate_iPad *)[[UIApplication sharedApplication] delegate];
+//	[delegate.navController pushViewController:theDetailView animated:YES];
+
+	
+	// load a scrollview with target image, which can be swiped left/right/
+	ImagesScrollViewController *scrollView ;
 	if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad ) {
-		theDetailView = [[ImageDetailView alloc] initWithNibName:@"ImageDetailView" bundle:nil];
+		scrollView = [[ImagesScrollViewController alloc] initWithNibName:@"ImagesScrollView_iPad" bundle:nil];	
+		AppDelegate_iPad *delegate = (AppDelegate_iPad *)[[UIApplication sharedApplication] delegate];
+		[delegate.navController pushViewController:scrollView animated:YES];
 	}else if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone ) {
-		theDetailView = [[ImageDetailView alloc] initWithNibName:@"ImageDetailView_iPhone" bundle:nil];
+		scrollView = [[ImagesScrollViewController alloc] initWithNibName:@"ImagesScrollView_iPhone" bundle:nil];	
+		AppDelegate_iPhone *delegate = (AppDelegate_iPhone *)[[UIApplication sharedApplication] delegate];
+		[delegate.navController pushViewController:scrollView animated:YES];
+		
 	}
 	
-	
-	// ImageDetailView *theDetailView = [[ImageDetailView alloc] initWithNibName:@"ImageDetailView" bundle:nil];
-	
-	//theDetailView.theImage = image;
-	
-	AppDelegate_iPad *delegate = (AppDelegate_iPad *)[[UIApplication sharedApplication] delegate];
-	[delegate.navController pushViewController:theDetailView animated:YES];
 	
 	
 }

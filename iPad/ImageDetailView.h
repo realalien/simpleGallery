@@ -15,6 +15,8 @@
 
 @interface ImageDetailView : UIViewController<UIScrollViewDelegate> {  // TapDetectingImageViewDelegate
 
+	int artPageNumber;
+	
 	BOOL isAutoSlideShow;
 	
 	//UIImage *theImage;
@@ -63,4 +65,5 @@
 
 - (CGRect)zoomRectForScale:(float)scale withCenter:(CGPoint)center;
 
+- (id)initWithPageNumber:(int)page;
 @end

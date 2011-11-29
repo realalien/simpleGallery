@@ -33,6 +33,7 @@
 @synthesize bookCoversDir ;
 @synthesize contentRootDir ;
 @synthesize currentProcessingImageID;
+@synthesize targetImageID;
 
 // ----------   singleton implementation -----------
 static BookShelfManager	*sharedInstance = nil;

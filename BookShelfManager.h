@@ -34,7 +34,12 @@ typedef UIImage CCSprite;
 	int bookNumberOnEachColumn;
 	
 	int currentViewingColumn ;  // if bookshelf has multiple columns, decide which one to be shown, also with target books cover on that 
-	int currentProcessingImageID;  // to facilitate the knowledge of image ID between the views(Grid and cell)
+	
+
+	int targetImageID;  // the image ID to be shown in the containing scrollview
+	// NOTE: because in our scrollview, we will prepare 3 consecutive subviews (instances of MyViewController with ImageDetailView insided),
+	//       so the currentProcessingImageID will be used in the subview to have a knowledge about which art work to load from BookShelfManager.
+	int currentProcessingImageID;  // to facilitate the loading of images just at the left and right side of the targetImage
 	
 	NSMutableArray *covers ;
 	//NSMutableDictionary *idToFilePath ;
@@ -61,6 +66,7 @@ typedef UIImage CCSprite;
 @property(retain)	NSString *contentRootDir ;
 
 @property int currentProcessingImageID;
+@property int targetImageID;
 
 +(BookShelfManager*) sharedInstance ;
 
