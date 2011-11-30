@@ -111,15 +111,15 @@
 																  repeats:NO];
 	
 	// swipe recognizers
-	leftSwipeRecog = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(showPrevArt)];
-    [leftSwipeRecog setDirection:(UISwipeGestureRecognizerDirectionLeft)];
-    [[self view] addGestureRecognizer:leftSwipeRecog];
-    [leftSwipeRecog release];
-	
-    rightSwipeRecog = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(showNextArt)];
-    [rightSwipeRecog setDirection:(UISwipeGestureRecognizerDirectionRight)];
-    [[self view] addGestureRecognizer:rightSwipeRecog];
-    [rightSwipeRecog release];
+//	leftSwipeRecog = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(showPrevArt)];
+//    [leftSwipeRecog setDirection:(UISwipeGestureRecognizerDirectionLeft)];
+//    [[self view] addGestureRecognizer:leftSwipeRecog];
+//    [leftSwipeRecog release];
+//	
+//    rightSwipeRecog = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(showNextArt)];
+//    [rightSwipeRecog setDirection:(UISwipeGestureRecognizerDirectionRight)];
+//    [[self view] addGestureRecognizer:rightSwipeRecog];
+//    [rightSwipeRecog release];
 	
 	
     [super viewDidLoad];
@@ -226,7 +226,7 @@
 
 
 -(void) setImageTo:(int)imageID {
-	NSLog(@"(Material *)[[[BookShelfManager sharedInstance] allMaterials] objectAtIndex:theArtId] is %@", [[[BookShelfManager sharedInstance] allMaterials] objectAtIndex:imageID]);
+	//NSLog(@"(Material *)[[[BookShelfManager sharedInstance] allMaterials] objectAtIndex:theArtId] is %@", [[[BookShelfManager sharedInstance] allMaterials] objectAtIndex:imageID]);
 	NSString *fileName = ((Material *)[[[BookShelfManager sharedInstance] allMaterials] objectAtIndex:imageID]).contentFullPathAtDevice;
 	
 	// ESP, this can't be done, otherwise crashes, Q: why? A:

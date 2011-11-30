@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 
 // NOTE: some code are borrowed from 'PageControl' example code.
-@interface ImagesScrollViewController : UIViewController <UIScrollViewDelegate> {
+@interface ImagesScrollViewController : UIViewController <UIScrollViewDelegate, UIGestureRecognizerDelegate> {
 
 	UIScrollView* scrollView;
 	

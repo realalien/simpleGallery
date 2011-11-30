@@ -67,7 +67,9 @@
 		}		
 	}
 	
-
+	ImageDetailView *aDetailView = [[ImageDetailView alloc] initWithPageNumber:pageNumber];  //  [[ImageDetailView alloc] initWithNibName:@"ImageDetailView_iPhone" bundle:nil];
+	self.view = aDetailView.view;
+	
     return self;
 }
 
@@ -85,8 +87,7 @@
 {
     // pageNumberLabel.text = [NSString stringWithFormat:@"Page %d", pageNumber + 1];
 	
-	ImageDetailView *aDetailView = [[ImageDetailView alloc] initWithPageNumber:pageNumber];  //  [[ImageDetailView alloc] initWithNibName:@"ImageDetailView_iPhone" bundle:nil];
-	self.view = aDetailView.view;
+
 	
 }
 
